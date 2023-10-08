@@ -1,6 +1,6 @@
 module.exports = (io) => {
   io.on("connection", (socket) => {
-    console.log("A user connected");
+    console.log(`${socket.id} connected`);
 
     socket.on("chat message", (msg) => {
       io.emit("chat message", msg);
